@@ -12,7 +12,7 @@ export const selectIsCartOpen = createSelector(
     (cartSlice) => cartSlice.isCartOpen
 );
 
-export const selecteCartCount = createSelector([selectCartItems], (cartItems) =>
+export const selectCartCount = createSelector([selectCartItems], (cartItems) =>
     cartItems.reduce((total, cartItem) => total + cartItem.quantity, 0)
 );
 
